@@ -1,0 +1,4 @@
+"""format(,'.2f')"""
+Food = {'banana':format(0.20,'.2f'), 'apple':format(0.15,'.2f')}
+
+print (Food)
