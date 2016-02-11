@@ -1,0 +1,11 @@
+items_list = {'car-red':10.67,'baseball bat':15.51,'bicycle':25.56}
+
+def ascending():
+    HighToLow= sorted(items_list.items(), key = lambda t: t[0])
+    print (HighToLow)
+def desending():
+    LowToHigh= sorted(items_list.items(), key = lambda t:t[1])
+    print (LowToHigh)
+ascending()
+user_input= input("please type 'ascending' or 'desecnding' for price: ")
+
