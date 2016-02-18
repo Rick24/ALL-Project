@@ -1,0 +1,5 @@
+from time import sleep
+for i in range (0,120):
+    print (120 - i)
+    sleep(1)
+print ("you ran out of time")
