@@ -9,3 +9,19 @@ def desending():
 ascending()
 user_input= input("please type 'ascending' or 'desecnding' for price: ")
 
+==================================================================================
+
+#bubblesort for the items
+
+"""if the item costs more than the item thats next to it.
+        it will swap with that items till its LowtoHigh"""
+def lowToHigh(myList):
+    for i in range(0, len (myList)-1):
+        for j in range(0, len (myList)-1-i):
+            if myList[j] > myList[j+1]:
+                myList[j], myList[j+1] = myList[j+1] , myList[j]
+    return myList
+List = {'car-red':10.67,'baseball bat':15.51,'bicycle':25.56}
+print (lowToHigh(List))
+
+
