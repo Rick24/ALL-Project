@@ -10,18 +10,52 @@ ascending()
 user_input= input("please type 'ascending' or 'desecnding' for price: ")
 
 ==================================================================================
+# Next/new bubble sort code
+
+from tkinter import *
+
+root = Tk()
+canvas = Canvas(root, width=400, height=300, bg='white').pack()
 
 #bubblesort for the items
 
-"""if the item costs more than the item thats next to it.
-        it will swap with that items till its LowtoHigh"""
+"""this will allow the price of the items to ascend or descend
+    by the users action"""
+
 def lowToHigh(myList):
     for i in range(0, len (myList)-1):
         for j in range(0, len (myList)-1-i):
             if myList[j] > myList[j+1]:
                 myList[j], myList[j+1] = myList[j+1] , myList[j]
+    return (myList)
+
+def highToLow(myList):
+    for i in range(0, len (myList)-1):
+        for j in range(0, len (myList)-1-i):
+            if myList[j+1] > myList[j]:
+                myList[j+1], myList[j] = myList[j] , myList[j+1]
     return myList
-List = {'car-red':10.67,'baseball bat':15.51,'bicycle':25.56}
-print (lowToHigh(List))
+
+List = [485,5,7,9,8,6,4,2,5,1,3,5,78]
+
+#Low price function
+
+def pricedrop():
+    print (lowToHigh(List))
+
+button1=Button(root,text='Descending', command=pricedrop)
+button1.pack(side=RIGHT)
+
+#High price function
+def priceRaise():
+    print (highToLow(List))
+
+button2=Button(root,text='Ascending', command=priceRaise)
+button2.pack(side=RIGHT)
+
+root.mainloop()
+
+
+
 
 
