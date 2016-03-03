@@ -1,0 +1,38 @@
+### basic gui in object orientated code
+
+from tkinter import *
+from random import*
+
+
+class game:
+
+    def __init__(self):
+        self.root=Tk()
+        self.RUN=False
+        
+        self.frame= Frame(bg='grey')
+        self.frame.pack();
+
+        self.canvas=Canvas(self.frame, bg='black', width= 500, height= 500)
+        self.canvas.pack()
+
+        self.clock=Label(self.frame, bg= 'grey', fg= 'white')
+        self.clock.pack()
+        self.points=Label(self.frame, bg='grey', fg='white')
+        self.points.pack()
+        self.button=Button(self.frame, bg='grey', fg='white', text="start", )
+        self.button.pack()
+        
+        self.root.mainloop()
+
+    def run(self):
+        if self.RUN is True:
+            self.root.after(10, self.run)
+
+    def start(self):
+        self.time=0
+        self.RUN=True
+        
+        
+
+app=game()    
