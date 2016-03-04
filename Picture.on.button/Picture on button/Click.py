@@ -18,3 +18,10 @@ button2.config(image=mi1, compound=RIGHT)
 tmi2 = mi1.subsample(7,7)
 button2.config(image=tmi2)
 
+#oranges
+button3=ttk.Button(rw,text="orange")
+button3.pack()
+mi1=PhotoImage(file="apple.GIF")
+button3.config(image=mi1, compound=RIGHT)
+tmi2 = mi1.subsample(7,7)
+button3.config(image=tmi2)
