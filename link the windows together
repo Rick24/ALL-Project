@@ -1,0 +1,15 @@
+def iteamarea():
+    """this screen is destroyed after user presses button and next screen
+         appears."""
+    def kill2():
+        root.destroy()
+#change the screen4 and itemarea to what your .py file is saved as. 
+        from screen4 import itemarea
+        iteamarea()
+
+    button2 = Button(root, bg = 'yellow', text = 'Go to List', command = kill2)
+    button2.pack()
+
+
+if __name__ == '__main__':
+    iteamarea()
