@@ -1,0 +1,73 @@
+import sqlite3
+import tkinter as ttk
+from tkinter import *
+from random import*
+
+
+class game:
+
+    def __init__(self):
+        self.root=Tk()
+        
+        self.frame= Frame(bg='grey')
+        self.frame.pack();
+
+        self.canvas=Canvas(self.frame, bg='black', width= 500, height= 500)
+        self.canvas.pack()
+
+        self.clock=Label(self.frame, bg= 'grey', fg= 'white')
+        self.clock.pack()
+        self.points=Label(self.frame, bg='grey', fg='white')
+        self.points.pack()
+        self.button=Button(self.frame, bg='grey', fg='white', text="start", )
+        self.button.pack()
+        
+        self.root.mainloop()
+
+        def timer(self):
+            from time import sleep
+        for i in range (0,120):
+            print (120 - i)
+            sleep(1)
+            print ("you ran out of time")
+
+
+def bubble(self):
+    """this will allow the price of the items to ascend or descend
+    by the users action"""
+
+def lowToHigh(self, myList):
+    for i in range(0, len (myList)-1):
+        for j in range(0, len (myList)-1-i):
+            if myList[j] > myList[j+1]:
+                myList[j], myList[j+1] = myList[j+1] , myList[j]
+    return myList
+
+def highToLow(self, myList):
+    for i in range(0, len (myList)-1):
+        for j in range(0, len (myList)-1-i):
+            if myList[j+1] > myList[j]:
+                myList[j+1], myList[j] = myList[j] , myList[j+1]
+    return myList
+
+List = [485,5,7,9,8,6,4,2,5,1,3,5,78]
+
+#Low price function
+
+def pricedrop(self):
+    self.root=Tk
+    print (lowToHigh(List))
+
+button1=Button(bg='yellow', text='Descending', command=pricedrop)
+button1.pack(side=RIGHT)
+
+#High price function
+def priceRaise(self):
+    print (highToLow(List))
+
+button2=Button(bg='yellow', text='Ascending', command=priceRaise)
+button2.pack(side=RIGHT)
+
+
+app=game()
+
