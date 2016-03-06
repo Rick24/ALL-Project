@@ -1,6 +1,7 @@
 import sqlite3
-import tkinter as ttk
+from time import sleep
 from tkinter import *
+import tkinter as ttk
 from random import*
 
 
@@ -8,6 +9,7 @@ class game:
 
     def __init__(self):
         self.root=Tk()
+        self.RUN=False
         
         self.frame= Frame(bg='grey')
         self.frame.pack();
@@ -17,57 +19,58 @@ class game:
 
         self.clock=Label(self.frame, bg= 'grey', fg= 'white')
         self.clock.pack()
-        self.points=Label(self.frame, bg='grey', fg='white')
+        self.points=Label(self.frame, bg='grey', fg='black')
         self.points.pack()
-        self.button=Button(self.frame, bg='grey', fg='white', text="start", )
+        self.button=Button(self.frame, bg='grey', fg='black', text="start", )
         self.button.pack()
-        
-        self.root.mainloop()
 
-        def timer(self):
-            from time import sleep
-        for i in range (0,120):
-            print (120 - i)
-            sleep(1)
-            print ("you ran out of time")
+        self.time=  0
+        self.clock['text']="TIME:" + str(self.time//100)
+        self.point= 0
+        self.points['text']="SCORE:" + str(self.point)
+        self.root.mainloop()
 
 
 def bubble(self):
     """this will allow the price of the items to ascend or descend
     by the users action"""
 
-def lowToHigh(self, myList):
+def lowToHigh(myList):
+    self.mylist= myList
     for i in range(0, len (myList)-1):
         for j in range(0, len (myList)-1-i):
-            if myList[j] > myList[j+1]:
+            if self.myList[j] > myList[j+1]:
                 myList[j], myList[j+1] = myList[j+1] , myList[j]
     return myList
 
-def highToLow(self, myList):
-    for i in range(0, len (myList)-1):
-        for j in range(0, len (myList)-1-i):
+def highToLow(myList):
+    for i in range(10, len (myList)-1):
+        for j in range(10, len (myList)-1-i):
             if myList[j+1] > myList[j]:
                 myList[j+1], myList[j] = myList[j] , myList[j+1]
     return myList
 
-List = [485,5,7,9,8,6,4,2,5,1,3,5,78]
+def List(self):
+    self.list=List
+    List = [485,5,7,9,8,6,4,2,5,1,3,5,78]
 
 #Low price function
 
-def pricedrop(self):
-    self.root=Tk
-    print (lowToHigh(List))
+def pricedrop(myList):
+    return (self.lowToHigh(myList))
 
 button1=Button(bg='yellow', text='Descending', command=pricedrop)
 button1.pack(side=RIGHT)
 
 #High price function
 def priceRaise(self):
-    print (highToLow(List))
-
+    return(self.HighToLow)
 button2=Button(bg='yellow', text='Ascending', command=priceRaise)
 button2.pack(side=RIGHT)
 
 
 app=game()
+
+
+
 
