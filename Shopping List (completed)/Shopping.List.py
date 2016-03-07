@@ -80,7 +80,7 @@ button6.config(image=tmi6)
 #leather boots
 button7=ttk.Button(rw,text="Leather Boots", command = lambda: displayInfo(7))
 button7.pack()
-mi7=PhotoImage(file="leather boots.GIF")
+mi7=PhotoImage(file="leather.boots.GIF")
 button7.config(image=mi7, compound=RIGHT)
 tmi7 = mi7.subsample(6,6)
 button7.config(image=tmi7)
