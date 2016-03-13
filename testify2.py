@@ -3,7 +3,7 @@ from tkinter import *
 import time
 import math
 from tkinter import ttk
-rw = Tk()
+
 
 class Gui:
     def __init__(self, root):
@@ -94,7 +94,7 @@ class Gui:
         self.var.set ("0:00")
         self.label.pack()
 
-        self.count = 2
+        self.count = 10
         self.timer()
         
     def displayInfo(self,id):
@@ -110,18 +110,14 @@ class Gui:
         conn.close()
     
     def timer(self):
-        self.var.set(self.count)
-        self.count -= 1
-        #time.sleep(1.0)
-        self.root.after(1000,self.timer)
-    if timer == 0:
-       timer.cancel()
-    
-    
-         
-         
+       #while self.count != 0:
+            self.var.set(self.count)
+            if self.count >0:
+                self.count -= 1
+                
+            #time.sleep(1.0)
+                self.root.after(1000,self.timer)
         
-    
 
 #for t in range(120,-1,-1):
 #    minutes = t / 60
@@ -132,7 +128,8 @@ class Gui:
 #    time.sleep(1.0)
 
 
-root = Tk()
-g = Gui(root)
-root.mainloop()
+if __name__ == '__main__':
+    rw = Tk()
+    g = Gui(rw)
+    rw.mainloop()
 
